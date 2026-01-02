@@ -1,22 +1,10 @@
 system:
-  # Konkurensi: 20-30 aman untuk laptop, 50-100 untuk VPS
-  max_threads: 25
-  # Timeout per proses (detik)
-  timeout: 3600
-  # Batas RAM (%). Jika > 90%, scan akan PAUSE otomatis.
-  ram_threshold: 90.0
-  # Folder penyimpanan hasil scan
+  general_threads: 40
+  heavy_threads: 10
+  timeout: 7200
   storage_path: "./scans"
+  # Ganti dengan Webhook Discord Anda (Opsional)
+  discord_webhook: "" 
 
-ai:
-  enabled: true
-  model: "llama3"
-  host: "http://localhost:11434/api/generate"
-  # Waktu tunggu AI berpikir
-  timeout: 60
-
-scope:
-  # Domain yang dilarang disentuh
-  exclude_domains: ["google.com", "gov", "mil"]
-  # Ekstensi file sampah yang tidak perlu discan
-  exclude_ext: "png,jpg,jpeg,gif,css,js,woff,svg,ico"
+filter:
+  extensions: "png,jpg,jpeg,gif,css,js,svg,ico,woff,mp4"
