@@ -13,6 +13,7 @@ Titan-Onyx is an industrial-grade, fault-tolerant cybersecurity automation frame
 ```bash
 chmod +x install.sh
 ./install.sh
+```
 
 ## 💻 Usage
 
